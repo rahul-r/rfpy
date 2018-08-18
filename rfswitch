@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
-import rfpi
+import rfpy
 from rfcodes import rfswitch
 
 
@@ -11,7 +11,7 @@ if __name__ == '__main__':
     parser.add_argument('onoff' , nargs=1, type=str, choices=['on', 'off'], help='on or off')
     args = parser.parse_args() 
 
-    rf = rfpi.RF()
+    rf = rfpy.RF()
     rf.init()
     
     if args.onoff[0] == 'on':
