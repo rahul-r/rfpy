@@ -6,7 +6,7 @@ from rfcodes import rfswitch
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(prog='rftx')
+    parser = argparse.ArgumentParser()
     parser.add_argument('switch', nargs=1, type=int, choices=range(len(rfswitch)), help='switch number')
     parser.add_argument('onoff' , nargs=1, type=str, choices=['on', 'off'], help='on or off')
     args = parser.parse_args() 
